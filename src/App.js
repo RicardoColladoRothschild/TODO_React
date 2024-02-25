@@ -1,10 +1,12 @@
 import React from 'react';
-import './App.css';
-import { CreateTodoButton } from './CreateTodoButton';
+
+
+import { MainComponent } from './MainComponent';
 import { TodoCounter } from './TodoCounter';
 import { TodoItem } from './TodoItem';
 import { TodoList } from './TodoList';
 import { TodoSearch } from './TodoSearch';
+import { AddTaskComponent } from './AddTaskComponent';
 
 const defaultTodos = [
   {
@@ -33,22 +35,23 @@ function App() {
   return (
       <React.Fragment>
          <TodoCounter completed = {16} total = {25}/>
-        <TodoSearch />
 
-
-         <TodoList>
-        {defaultTodos.map(todo =>(
-            <TodoItem key={todo.text}
-             text={todo.text}
-            completed={todo.completed}/>
-        ))}
+         <MainComponent>
+            <AddTaskComponent/>
+            <TodoList>
+         
+              <TodoSearch />
+                {defaultTodos.map(todo =>(
+                   <TodoItem key={todo.text}
+                     text={todo.text}
+                     completed={todo.completed}/>
+                 ))}
         
-      </TodoList>
-      
-      <CreateTodoButton/>
+              </TodoList>
+
+         </MainComponent>
      
       </React.Fragment>
-      
     
   );
 }
