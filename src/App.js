@@ -1,48 +1,55 @@
 import './App.css';
-import logo from './platzi.webp';
+import { CreateTodoButton } from './CreateTodoButton';
+import { TodoCounter } from './TodoCounter';
+import { TodoItem } from './TodoItem';
+import { TodoList } from './TodoList';
+import { TodoSearch } from './TodoSearch';
+import React from 'react';
+
+const defaultTodos = [
+  {
+    text:'React Course',
+    completed:false
+  },
+  {
+    text:'Create base code',
+    completed:false
+  },
+  {
+    text:'Organazi data base',
+    completed:true
+  },
+  {
+    text:'Build components',
+    completed:false
+  },
+  {
+    text:'Practice what you learned',
+    completed:false
+  }
+];
 
 function App() {
   return (
-    <div className="App">
-      <h2>Has completado 4 de 5</h2>
-      <ul>
-      <TodoItem completed={2} total={5}/>
-      <TodoItem completed={3} total={5}/>
-      <TodoItem completed={4} total={5} />
-      </ul>
-     
+      <React.Fragment>
+         <TodoCounter completed = {16} total = {25}/>
+      <TodoSearch />
 
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edita el archivo <code>src/App.js</code> y guarda para recargar.
-        </p>
-        <a
-          className="App-link"
-          href="https://platzi.com/reactjs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aprendamos React
-        </a>
-      </header>
-    </div>
+
+      <TodoList>
+        {defaultTodos.map(todo =>(
+            <TodoItem key={todo.text}
+             text={todo.text}
+            completed={todo.completed}/>
+        ))}
+        
+      </TodoList>
+      
+      <CreateTodoButton/>
+     
+      </React.Fragment>
+      
+    
   );
 }
-
-function TodoItem(props){
-    return (
-      <li>
-        <span>V</span>
-        <p>Mejorar en React</p>
-        <h1>
-          Completaste:
-            {props.completed} de
-            {props.total} TO-DOs
-        </h1>
-        <span>X</span>
-      </li>
-    );
-}
-
 export default App;
