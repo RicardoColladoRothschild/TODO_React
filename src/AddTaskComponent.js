@@ -1,7 +1,11 @@
 import { CreateTodoButton } from './CreateTodoButton';
 function AddTaskComponent(){
     return (
-        <CreateTodoButton/>
+        <div>
+            <input placeholder="Comprar cafe"/>
+             <CreateTodoButton/>
+        </div>
+        
     );
 }
 

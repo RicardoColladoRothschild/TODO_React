@@ -18,7 +18,7 @@ const defaultTodos = [
     completed:false
   },
   {
-    text:'Organazi data base',
+    text:'Organizar data base',
     completed:true
   },
   {

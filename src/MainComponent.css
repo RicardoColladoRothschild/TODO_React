@@ -1,0 +1,8 @@
+
+.main-container-component{
+    width:100%;
+    height:500px;
+    display:grid;
+    place-items: center;
+    
+}
