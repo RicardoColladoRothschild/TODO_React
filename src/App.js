@@ -1,10 +1,10 @@
+import React from 'react';
 import './App.css';
 import { CreateTodoButton } from './CreateTodoButton';
 import { TodoCounter } from './TodoCounter';
 import { TodoItem } from './TodoItem';
 import { TodoList } from './TodoList';
 import { TodoSearch } from './TodoSearch';
-import React from 'react';
 
 const defaultTodos = [
   {
@@ -33,10 +33,10 @@ function App() {
   return (
       <React.Fragment>
          <TodoCounter completed = {16} total = {25}/>
-      <TodoSearch />
+        <TodoSearch />
 
 
-      <TodoList>
+         <TodoList>
         {defaultTodos.map(todo =>(
             <TodoItem key={todo.text}
              text={todo.text}
