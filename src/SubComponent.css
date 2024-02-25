@@ -1,0 +1,6 @@
+.sub-component-container{
+    width:500;
+    height:85vh;
+    display:flex;
+    flex-direction:row;
+}

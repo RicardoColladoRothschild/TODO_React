@@ -1,7 +1,37 @@
+import { TodoItem } from './TodoItem';
+import { TodoSearch } from './TodoSearch';
+
+const defaultTodos = [
+    {
+      text:'React Course',
+      completed:false
+    },
+    {
+      text:'Create base code',
+      completed:false
+    },
+    {
+      text:'Organizar data base',
+      completed:true
+    },
+    {
+      text:'Build components',
+      completed:false
+    },
+    {
+      text:'Practice what you learned',
+      completed:false
+    }
+  ];
 function TodoList(props){
     return (
         <ul>
-            {props.children}
+            <TodoSearch />
+                {defaultTodos.map(todo =>(
+                   <TodoItem key={todo.text}
+                     text={todo.text}
+                     completed={todo.completed}/>
+                 ))}
         </ul>
     );
 }
