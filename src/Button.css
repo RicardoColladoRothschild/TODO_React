@@ -1,0 +1,23 @@
+:root{
+    --primary-color:#5FFAF4;
+    --secondary-color:#5FCEFA;
+    --background-color:#5FFAC0;
+    --letter-color:#5F6CFA;
+}
+button{
+    margin-top:15px;
+    width: 65px;
+    height:31px;
+    font-size:1.4rem;
+    color:var(--letter-color);
+    border:none;
+    border-radius:8px;
+    box-shadow: 8px 8px 8px rgba(0,0,0,0.5);
+}
+button:hover{
+    background-color: var(--secondary-color);
+    color:var(--primary-color);
+    cursor:pointer;
+    border:1px solid var(--letter-color);
+    
+}
