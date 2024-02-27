@@ -1,6 +1,6 @@
 import { TodoItem } from './TodoItem';
+import './TodoList.css';
 import { TodoSearch } from './TodoSearch';
-
 const defaultTodos = [
     {
       text:'React Course',
@@ -25,7 +25,7 @@ const defaultTodos = [
   ];
 function TodoList(props){
     return (
-        <ul>
+        <ul className="list-container">
             <TodoSearch />
                 {defaultTodos.map(todo =>(
                    <TodoItem key={todo.text}
