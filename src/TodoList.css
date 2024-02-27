@@ -27,3 +27,11 @@
     background-color:beige;
     cursor:pointer;
 }
+.list-container li span{
+    display:relative;
+    top:10px;
+    font-size:1.2rem;
+}
+.list-container li span:hover{
+    color:red;
+}

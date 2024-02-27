@@ -1,13 +1,10 @@
 import React from 'react';
 
 
+import './App.css';
 import { MainComponent } from './MainComponent';
-import { TodoCounter } from './TodoCounter';
-import { TodoItem } from './TodoItem';
-import { TodoList } from './TodoList';
-import { TodoSearch } from './TodoSearch';
-import { AddTaskComponent } from './AddTaskComponent';
 import { SubComponent } from './SubComponent';
+import { TodoCounter } from './TodoCounter';
 
 
 function App() {

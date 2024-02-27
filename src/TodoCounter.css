@@ -3,4 +3,12 @@ h1 {
     text-Align:center;
     margin:0;
     padding:48px;
+    background-color: whitesmoke;
+    color:cadetblue;
+    padding:4px;
+  }
+
+  h1 span{
+    color:brown;
+
   }
