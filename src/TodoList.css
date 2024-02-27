@@ -8,11 +8,22 @@
 }
 
 .list-container li{
-    width:120px;
-    height:32px;
-    background-color:white;
+    width:215px;
+    height:17px;
+    background-color:whitesmoke;
     margin-bottom: 13px;
     margin-top:5px;
     text-align:center;
-    padding:8px;
+    padding:14px;
+    display: flex;
+    flex-direction:row;
+    border-radius:16px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+    gap:8px;
+
+}
+
+.list-container li:hover{
+    background-color:beige;
+    cursor:pointer;
 }
