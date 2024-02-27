@@ -1,7 +1,15 @@
+:root{
+    --primary-color:#5FFAF4;
+    --secondary-color:#5FCEFA;
+    --background-color:#5FFAC0;
+    --letter-color:#5F6CFA;
+}
+
 .list-container{
     width:50%;
     height:360;
     display:flex;
+    
     flex-direction:column;
     text-decoration: none;
     list-style:none;
@@ -32,13 +40,15 @@
     color:grey;
 }
 .list-container li span{
+    position:relative;   
+    top:-38px;
+    right:-37px;
+    font-size:2.8rem;
+    color:var(--letter-color);
+    border-radius:50px;
     
-    top:10px;
-    font-size:1.8rem;
-    margin-left:38px;
     margin-bottom:38px;
-   
 }
-.list-container li span:hover{
+.list-container span:hover{
     color:red;
 }
