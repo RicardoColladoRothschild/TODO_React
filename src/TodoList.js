@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { TodoItem } from './TodoItem';
 import './TodoList.css';
 import { TodoSearch } from './TodoSearch';
@@ -24,6 +25,8 @@ const defaultTodos = [
     }
   ];
 function TodoList(props){
+    const [datos, setDatos] = useState(defaultTodos);
+
     return (
         <ul className="list-container">
             <TodoSearch />

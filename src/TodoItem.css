@@ -1,0 +1,29 @@
+.TodoItem .TodoItem-p{
+    
+    width: calc(100% - 120px);
+    font-size:1.8rem;
+    line-height: 1.2rem;
+    font-weight:400;
+}
+
+.TodoItem-p--complete{
+    text-decoration:line-through;
+}
+
+.Icon{
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: 31px;
+    width: 31px;
+    font-size:2.1rem;
+    font-weight:bold;
+
+}
+
+.Icon-check{
+    position:absolute;
+    left:-6px;
+    color:green;
+}
