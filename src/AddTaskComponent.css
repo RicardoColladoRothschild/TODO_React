@@ -4,13 +4,13 @@
     display:flex;
     flex-direction:column;
     justify-content: center;
-    
+    margin-right:35px;
 }
 
 .newtask-container input{
     width:150px;
-    height:25px;
-    padding:6px;
+    height:31px;
+    padding:12px;
     border:none;
     outline: none;
     border-radius: 6px;

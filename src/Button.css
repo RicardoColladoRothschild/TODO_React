@@ -8,7 +8,8 @@ button{
     margin-top:15px;
     width: 65px;
     height:31px;
-    font-size:1.4rem;
+    font-size:1.8rem;
+    font-weight: bold;
     color:var(--letter-color);
     border:none;
     border-radius:8px;
