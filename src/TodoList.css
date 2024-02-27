@@ -8,12 +8,15 @@
 }
 
 .list-container li{
-    width:215px;
-    height:17px;
+    
+    width:300px;
+    height:47px;
     background-color:whitesmoke;
     margin-bottom: 13px;
     margin-top:5px;
     text-align:center;
+    font-size:1.6rem;
+    font-weight: 500;
     padding:14px;
     display: flex;
     flex-direction:row;
@@ -26,11 +29,15 @@
 .list-container li:hover{
     background-color:beige;
     cursor:pointer;
+    color:grey;
 }
 .list-container li span{
-    display:relative;
+    
     top:10px;
-    font-size:1.2rem;
+    font-size:1.8rem;
+    margin-left:38px;
+    margin-bottom:38px;
+   
 }
 .list-container li span:hover{
     color:red;
