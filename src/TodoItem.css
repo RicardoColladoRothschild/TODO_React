@@ -25,12 +25,13 @@
 .Icon-check{
     position:absolute;
     left:-6px;
-    color:green;
+    color:grey;
 }
 
 /*new*/
 .Icon-check--active {
     color: #4caf50;
+   
     
   }
   

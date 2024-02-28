@@ -41,8 +41,8 @@
 }
 .list-container li .Icon-delete{
     position:relative;   
-    top:-38px;
-    right:-37px;
+    top:-20px;
+    right:-90px;
     font-size:2.8rem;
     color:var(--letter-color);
     border-radius:50px;

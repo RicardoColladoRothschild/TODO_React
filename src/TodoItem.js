@@ -9,7 +9,7 @@ function TodoItem(props){
         <span className={`Icon Icon-check ${props.completed  && "Icon-check--active"}`}>
           V
           </span> 
-          <p calssName={`TodoItem-p TodoItem-p--Complete`} style={style_TodoItem}>
+          <p className={`TodoItem-p ${props.completed  && "TodoItem-p--complete"} `} style={style_TodoItem}>
           {props.text}
           </p>
         
