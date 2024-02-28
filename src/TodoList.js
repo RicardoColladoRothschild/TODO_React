@@ -5,7 +5,7 @@ import { TodoSearch } from './TodoSearch';
 const defaultTodos = [
     {
       text:'React Course',
-      completed:false
+      completed:true
     },
     {
       text:'Create base code',
