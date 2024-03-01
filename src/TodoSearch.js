@@ -1,13 +1,14 @@
+import React from 'react';
 import './TodoSearch.css';
-function TodoSearch(){
+function TodoSearch(props){
+    
     return (
         <input placeholder = "clases de TypeScript" 
         className="TodoSearch"
+        value={props.searchValue} // acutalizamos el campo input value a lo que haya en el estado del componente
         onChange={(event)=>{
-                console.log('Estas escribiendo en el todo, search');
-                console.log(event);
-                console.log(event.target);
-                console.log(event.target.value);
+                props.setSearchValue(event.target.value); // actualizamos el estado con lo que haya en value
+                
 
  
         }

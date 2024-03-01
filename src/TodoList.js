@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TodoItem } from './TodoItem';
 import './TodoList.css';
 import { TodoSearch } from './TodoSearch';
@@ -25,11 +25,23 @@ const defaultTodos = [
     }
   ];
 function TodoList(props){
-    const [datos, setDatos] = useState(defaultTodos);
+  const [searchValue, setSearchValue] = React.useState(''); 
+
+  console.log('Los usuarios buscan un TODO de: ' + searchValue);
+
+  const result = defaultTodos.filter((element)=>{
+      return element.text === searchValue
+    
+  });
+
+    console.log(`Resultados era: ` + result.text);
 
     return (
         <ul className="list-container">
-            <TodoSearch />
+            <TodoSearch 
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+            />
                 {defaultTodos.map(todo =>(
                    <TodoItem key={todo.text}
                      text={todo.text}
