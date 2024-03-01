@@ -2,39 +2,21 @@ import React from 'react';
 import { TodoItem } from './TodoItem';
 import './TodoList.css';
 import { TodoSearch } from './TodoSearch';
-const defaultTodos = [
-    {
-      text:'React Course',
-      completed:true
-    },
-    {
-      text:'Create base code',
-      completed:false
-    },
-    {
-      text:'Organizar data base',
-      completed:true
-    },
-    {
-      text:'Build components',
-      completed:false
-    },
-    {
-      text:'Practice what you learned',
-      completed:false
-    }
-  ];
+import { defaultTodos } from './todosData';
 function TodoList(props){
+
+  
+  //const [todos, setTodos] = React.useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState(''); 
 
+
+  //const completedTodos = todos.filter(todo => !!todo.completed).length;
+
+
+  //const totalTodos;
+
+
   console.log('Los usuarios buscan un TODO de: ' + searchValue);
-
-  const result = defaultTodos.filter((element)=>{
-      return element.text === searchValue
-    
-  });
-
-    console.log(`Resultados era: ` + result.text);
 
     return (
         <ul className="list-container">
