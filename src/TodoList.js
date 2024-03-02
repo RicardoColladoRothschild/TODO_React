@@ -9,13 +9,6 @@ function TodoList(props){
   //const [todos, setTodos] = React.useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState(''); 
 
-
-  //const completedTodos = todos.filter(todo => !!todo.completed).length;
-
-
-  //const totalTodos;
-
-
   console.log('Los usuarios buscan un TODO de: ' + searchValue);
 
     return (

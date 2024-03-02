@@ -8,13 +8,14 @@ import { TodoCounter } from './TodoCounter';
 
 
 function App() {
+
   const [todos, setTodos] = React.useState(defaultTodos);
-  const completedTodos = todos.filter(todo => !!todo.completed).length;
-  
-  const total = todos.length;
+  const completedTodos = todos.filter(todo => !!todo.completed).length;  
+  const totalTodos = todos.length;
+
   return (
       <React.Fragment>
-         <TodoCounter completed = {completedTodos} total = {total}/>
+         <TodoCounter completed = {completedTodos} total = {totalTodos}/>
 
          <MainComponent>
           <SubComponent/>
