@@ -10,20 +10,47 @@ function TodoList(props){
   const [searchValue, setSearchValue] = React.useState(''); 
 
   console.log('Los usuarios buscan un TODO de: ' + searchValue);
-
+  const objectSearched = returnSearch(searchValue);
     return (
         <ul className="list-container">
             <TodoSearch 
               searchValue={searchValue}
               setSearchValue={setSearchValue}
             />
-                {defaultTodos.map(todo =>(
-                   <TodoItem key={todo.text}
-                     text={todo.text}
-                     completed={todo.completed}/>
-                 ))}
+
+                 {!searchValue?(
+                      defaultTodos.map(todo =>(
+                          <TodoItem key={todo.text}
+                              text={todo.text}
+                             completed={todo.completed}/>
+                            )
+                            )
+                  ):(
+                    <TodoItem key={objectSearched.text}
+                    text={objectSearched.text}
+                     completed={objectSearched.completed}/>
+                    
+                  )}
+
+
         </ul>
     );
+}
+/*TODO:
+El parametro que recibimos, value, no debe ser undefined, al retonar. El problema es que, en 
+nuestra busquecda ene l array, estamos buscando un elemento que sea "identico", durante las primeras
+letras que el usuario ha digitado, no va  a ser igual. */
+function returnSearch(value){
+
+      
+    const findsearch = defaultTodos.find((todo)=>{
+      return todo.text.toLowerCase === value.tolowerCase;
+    });
+    if(!findsearch){
+      return {text:value}
+    }
+
+    return findsearch;
 }
 
 export { TodoList };
