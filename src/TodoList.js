@@ -45,8 +45,7 @@ function returnSearch(value){
 
       
     const findsearch = defaultTodos.find((todo)=>{
-      console.log('Running find method, current value: ' + value);
-      console.log(todo.text + ' | ' + todo.completed);
+      
       return todo.text.toLowerCase() === value.toLowerCase();
     });
     if(!findsearch){
