@@ -9,8 +9,9 @@ function TodoList(props){
   //const [todos, setTodos] = React.useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState(''); 
 
-  console.log('Los usuarios buscan un TODO de: ' + searchValue);
-  const objectSearched = returnSearch(searchValue);
+  //console.log('Los usuarios buscan un TODO de: ' + searchValue);
+  let objectSearched = returnSearch(searchValue);
+  
     return (
         <ul className="list-container">
             <TodoSearch 
@@ -44,7 +45,9 @@ function returnSearch(value){
 
       
     const findsearch = defaultTodos.find((todo)=>{
-      return todo.text.toLowerCase === value.tolowerCase;
+      console.log('Running find method, current value: ' + value);
+      console.log(todo.text + ' | ' + todo.completed);
+      return todo.text.toLowerCase() === value.toLowerCase();
     });
     if(!findsearch){
       return {text:value}
