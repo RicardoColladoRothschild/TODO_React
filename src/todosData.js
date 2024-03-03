@@ -1,4 +1,4 @@
-export const defaultTodos = [
+ export const defaultTodos = [
     {
       text:'React Course',
       completed:true

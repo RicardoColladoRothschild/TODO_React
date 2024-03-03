@@ -13,12 +13,13 @@ function App() {
   const completedTodos = todos.filter(todo => !!todo.completed).length;  
   const totalTodos = todos.length;
 
+  
   return (
       <React.Fragment>
          <TodoCounter completed = {completedTodos} total = {totalTodos}/>
 
          <MainComponent>
-          <SubComponent/>
+          <SubComponent todos={todos} setTodos={setTodos}/>
           
 
          </MainComponent>
