@@ -2,6 +2,7 @@ import React from 'react';
 import { TodoItem } from './TodoItem';
 import './TodoList.css';
 import { TodoSearch } from './TodoSearch';
+import { defaultTodos } from './todosData';
 function TodoList({todos, setTodos}){
 
   
@@ -25,17 +26,13 @@ function TodoList({todos, setTodos}){
               searchValue={searchValue}
                 setSearchValue={setSearchValue}
             />
-<<<<<<< HEAD
-                {searchedTodos.map(todo =>(
-                   <TodoItem key={todo.text}
-                     text={todo.text}
-                     completed={todo.completed}/>
-                 ))}
-=======
 
                  {!searchValue?(
                       defaultTodos.map(todo =>(
-                          <TodoItem key={todo.text}
+                          <TodoItem 
+                            key={todo.text}
+                            todos = {todos}
+                            setTodos = {setTodos}
                               text={todo.text}
                              completed={todo.completed}/>
                             )
@@ -43,6 +40,8 @@ function TodoList({todos, setTodos}){
                   ):(
                     objectSearched.map((todo)=>(
                       <TodoItem key={todo.text}
+                      todos = {todos}
+                      setTodos = {setTodos}
                       text={todo.text}
                        completed={todo.completed}/>
                     ))
@@ -51,7 +50,6 @@ function TodoList({todos, setTodos}){
                   )}
 
 
->>>>>>> searchTodo/Feature_#02
         </ul>
     );
 }
