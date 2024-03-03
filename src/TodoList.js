@@ -27,6 +27,15 @@ function TodoList({todos, setTodos}){
          
    }
   let objectSearched = returnSearch(searchValue); 
+
+  const completeTodo = (text)=>{
+      const newTodos = [...todos];  
+      const todoIndex = newTodos.findIndex(
+        (todo) => todo.text ===text
+      );
+      newTodos[todoIndex].completed = true; 
+    setTodos(newTodos);
+  }
     return (
         <ul className="list-container">
             <TodoSearch 
@@ -43,8 +52,7 @@ function TodoList({todos, setTodos}){
                               text={todo.text}
                              completed={todo.completed}
                             deleteItem={()=>deleteItem(todo.text)}
-
-                             />
+                            onComplete={()=>completeTodo(todo.text)}/>
                             )
                             )
                   ):(
@@ -54,7 +62,8 @@ function TodoList({todos, setTodos}){
                       setTodos = {setTodos}
                       text={todo.text}
                        completed={todo.completed}
-                       deleteItem={()=>deleteItem(todo.text)}/>
+                       deleteItem={()=>deleteItem(todo.text)}
+                       onComplete={()=>completeTodo(todo.text)}/>
                     ))
                 )}
 
