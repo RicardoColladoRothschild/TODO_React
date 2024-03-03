@@ -2,7 +2,6 @@ import React from 'react';
 import { TodoItem } from './TodoItem';
 import './TodoList.css';
 import { TodoSearch } from './TodoSearch';
-import { defaultTodos } from './todosData';
 function TodoList({todos, setTodos}){
 
   
@@ -19,6 +18,14 @@ function TodoList({todos, setTodos}){
 
     return findsearch;
   } 
+
+  function deleteItem(text){
+
+     const estadoDerivado = todos.filter(todo=>todo.text !== text);
+      console.log('Deleting: ' + text);
+     setTodos(estadoDerivado);
+         
+   }
   let objectSearched = returnSearch(searchValue); 
     return (
         <ul className="list-container">
@@ -28,13 +35,16 @@ function TodoList({todos, setTodos}){
             />
 
                  {!searchValue?(
-                      defaultTodos.map(todo =>(
+                      todos.map(todo =>(
                           <TodoItem 
                             key={todo.text}
                             todos = {todos}
                             setTodos = {setTodos}
                               text={todo.text}
-                             completed={todo.completed}/>
+                             completed={todo.completed}
+                            deleteItem={()=>deleteItem(todo.text)}
+
+                             />
                             )
                             )
                   ):(
@@ -43,16 +53,13 @@ function TodoList({todos, setTodos}){
                       todos = {todos}
                       setTodos = {setTodos}
                       text={todo.text}
-                       completed={todo.completed}/>
+                       completed={todo.completed}
+                       deleteItem={()=>deleteItem(todo.text)}/>
                     ))
-                    
-                    
-                  )}
+                )}
 
 
         </ul>
     );
 }
-
-
 export { TodoList };

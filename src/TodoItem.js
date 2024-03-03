@@ -6,14 +6,7 @@ function TodoItem(props){
     }
 
 
-    function deleteItem(){
-     const itemIndex = props.todos.indexOf();
-
-      if(itemIndex !== -1){
-          props.todos.splice(itemIndex);
-          props.setTodos(props.todos);
-      }
-    }
+    
     return (
       <li className="TodoItem">
         <span className={`Icon Icon-check ${props.completed  && "Icon-check--active"}`}>
@@ -24,7 +17,7 @@ function TodoItem(props){
           </p>
         
         <p className={`Icon Icon-delete`} 
-          onClick={deleteItem()}
+          onClick={props.deleteItem}
         >x</p>  
       </li>
       
