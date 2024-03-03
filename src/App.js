@@ -19,7 +19,11 @@ function App() {
          <TodoCounter completed = {completedTodos} total = {totalTodos}/>
 
          <MainComponent>
+<<<<<<< HEAD
           <SubComponent todos={todos} setTodos={setTodos}/>
+=======
+          <SubComponent todos = {todos} setTodos = {setTodos}/>
+>>>>>>> searchTodo/Feature_#02
           
 
          </MainComponent>
