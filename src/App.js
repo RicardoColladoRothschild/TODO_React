@@ -18,7 +18,7 @@ function App() {
          <TodoCounter completed = {completedTodos} total = {totalTodos}/>
 
          <MainComponent>
-          <SubComponent/>
+          <SubComponent todos = {todos} setTodos = {setTodos}/>
           
 
          </MainComponent>

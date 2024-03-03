@@ -3,20 +3,28 @@ import { TodoItem } from './TodoItem';
 import './TodoList.css';
 import { TodoSearch } from './TodoSearch';
 import { defaultTodos } from './todosData';
-function TodoList(props){
+function TodoList({todos, setTodos}){
 
   
   //const [todos, setTodos] = React.useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState(''); 
 
   //console.log('Los usuarios buscan un TODO de: ' + searchValue);
-  let objectSearched = returnSearch(searchValue);
   
+  function returnSearch(value){
+
+    const findsearch = todos.filter((todo)=>{      
+      return todo.text.toLowerCase().includes(value.toLowerCase());
+    });    
+
+    return findsearch;
+  } 
+  let objectSearched = returnSearch(searchValue); 
     return (
         <ul className="list-container">
             <TodoSearch 
               searchValue={searchValue}
-              setSearchValue={setSearchValue}
+                setSearchValue={setSearchValue}
             />
 
                  {!searchValue?(
@@ -27,9 +35,12 @@ function TodoList(props){
                             )
                             )
                   ):(
-                    <TodoItem key={objectSearched.text}
-                    text={objectSearched.text}
-                     completed={objectSearched.completed}/>
+                    objectSearched.map((todo)=>(
+                      <TodoItem key={todo.text}
+                      text={todo.text}
+                       completed={todo.completed}/>
+                    ))
+                    
                     
                   )}
 
@@ -37,22 +48,6 @@ function TodoList(props){
         </ul>
     );
 }
-/*TODO:
-El parametro que recibimos, value, no debe ser undefined, al retonar. El problema es que, en 
-nuestra busquecda ene l array, estamos buscando un elemento que sea "identico", durante las primeras
-letras que el usuario ha digitado, no va  a ser igual. */
-function returnSearch(value){
 
-      
-    const findsearch = defaultTodos.find((todo)=>{
-      
-      return todo.text.toLowerCase() === value.toLowerCase();
-    });
-    if(!findsearch){
-      return {text:value}
-    }
-
-    return findsearch;
-}
 
 export { TodoList };
