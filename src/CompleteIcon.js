@@ -1,9 +1,10 @@
 import { TodoIcon } from './TodoIcon';
-function CompleteIcon(){
+function CompleteIcon({completed, onComplete}){
     return (
         <TodoIcon
             type="check"
-            color="green"
+            color={completed? "green": 'grey'}
+            onClick={onComplete}
         />
     );
 }

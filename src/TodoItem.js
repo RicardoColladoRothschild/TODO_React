@@ -11,20 +11,18 @@ function TodoItem(props){
     
     return (
       <li className="TodoItem">
-        <CompleteIcon />
-        {/** <span className={`Icon Icon-check ${props.completed  && "Icon-check--active"}`}
-          onClick={props.onComplete}
-        >
-          V
-          </span> */}
+        <CompleteIcon 
+        completed={props.completed}
+        onComplete={props.onComplete}/>
+       
           <p className={`TodoItem-p ${props.completed  && "TodoItem-p--complete"} `} style={style_TodoItem}>
           {props.text}
           </p>
         
-          <DeleteIcon/>
-          {/** <p className={`Icon Icon-delete`} 
-          onClick={props.deleteItem}
-        >x</p>*/}
+          <DeleteIcon
+          onDelete={props.deleteItem}
+          />
+          
       </li>
       
     );
