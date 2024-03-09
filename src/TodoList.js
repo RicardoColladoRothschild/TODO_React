@@ -19,14 +19,22 @@ function TodoList({todos, setTodos}){
     return findsearch;
   } 
 
+  const saveTodos = (newTodos) =>{
+    localStorage.setItem('TODOListRick_V1', JSON.stringify(newTodos));
+  
+  setTodos(newTodos);
+ }
+
   function deleteItem(text){
 
      const estadoDerivado = todos.filter(todo=>todo.text !== text);
-      console.log('Deleting: ' + text);
-     setTodos(estadoDerivado);
-         
-   }
+      
+     saveTodos(estadoDerivado);
+     }
   let objectSearched = returnSearch(searchValue); 
+
+
+  
 
   const completeTodo = (text)=>{
       const newTodos = [...todos];  
@@ -34,7 +42,7 @@ function TodoList({todos, setTodos}){
         (todo) => todo.text ===text
       );
       newTodos[todoIndex].completed = true; 
-    setTodos(newTodos);
+      saveTodos(newTodos);
   }
     return (
         <ul className="list-container">
