@@ -6,11 +6,23 @@ import { MainComponent } from './MainComponent';
 import { SubComponent } from './SubComponent';
 import { TodoCounter } from './TodoCounter';
 
-
+//localStorage.setItem('TODOListRick_V1', defaultTodos);
 function App() {
+  const localStorageTodos = localStorage.getItem('TODOListRick_V1');
+  let parsedTodos;
+    if(!localStorageTodos){
+      localStorage.setItem('TODOListRick_V1', JSON.stringify([]));
+      parsedTodos=[];
+    }else{
 
-  const [todos, setTodos] = React.useState(defaultTodos);
-  const completedTodos = todos.filter(todo => !!todo.completed).length;  
+      parsedTodos = JSON.parse(localStorageTodos);
+    }
+
+   
+
+  const [todos, setTodos] = React.useState(parsedTodos);
+
+  const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
 
   
