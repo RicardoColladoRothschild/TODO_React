@@ -1,6 +1,6 @@
+import { CreateTodoButton } from '../CreateTodoButton/CreateTodoButton';
+import { TaskImagen } from '../TaskImagen';
 import './AddTaskComponent.css';
-import { CreateTodoButton } from './CreateTodoButton';
-import { TaskImagen } from './TaskImagen';
 function AddTaskComponent(){
     return (
         <div>

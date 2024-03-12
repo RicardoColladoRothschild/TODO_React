@@ -1,7 +1,7 @@
 import React from 'react';
-import { AddTaskComponent } from './AddTaskComponent';
+import { AddTaskComponent } from '../AddTaskComponent/AddTaskComponent';
+import { TodoList } from '../TodoList/TodoList';
 import './SubComponent.css';
-import { TodoList } from './TodoList';
 function SubComponent({todos, setTodos}){
     const [searchValue, setSearchValue] = React.useState(''); 
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import { TodoItem } from './TodoItem';
+import { TodoItem } from '../TodoItem/TodoItem';
+import { TodoSearch } from '../TodoSearch/TodoSearch';
 import './TodoList.css';
-import { TodoSearch } from './TodoSearch';
 function TodoList({todos, setTodos}){
 
   
