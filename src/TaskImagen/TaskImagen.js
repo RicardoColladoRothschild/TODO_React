@@ -1,4 +1,4 @@
-import office from './assets/office.png';
+import office from '../assets/office.png';
 import './TaskImagen.css';
 function TaskImagen(){
     return (
