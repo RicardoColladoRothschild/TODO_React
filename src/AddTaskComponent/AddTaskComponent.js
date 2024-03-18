@@ -1,5 +1,5 @@
 import { CreateTodoButton } from '../CreateTodoButton/CreateTodoButton';
-import { TaskImagen } from '../TaskImagen';
+import { TaskImagen } from '../TaskImagen/TaskImagen';
 import './AddTaskComponent.css';
 function AddTaskComponent(){
     return (
