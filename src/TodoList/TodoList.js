@@ -8,7 +8,7 @@ function TodoList({todos, setTodos}){
   //const [todos, setTodos] = React.useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState(''); 
 
-  //console.log('Los usuarios buscan un TODO de: ' + searchValue);
+
   
   function returnSearch(value){
 
