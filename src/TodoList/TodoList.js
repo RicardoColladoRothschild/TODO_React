@@ -44,6 +44,15 @@ function TodoList({todos, setTodos}){
       newTodos[todoIndex].completed = true; 
       saveTodos(newTodos);
   }
+
+  console.log("Log 1");
+
+  React.useEffect(()=>{
+    console.log("Loooooog 2");
+  },[]);
+
+  console.log("Log 3");
+
     return (
         <ul className="list-container">
             <TodoSearch 
