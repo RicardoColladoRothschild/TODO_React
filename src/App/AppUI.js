@@ -5,7 +5,7 @@ import { TodoCounter } from '../TodoCounter/TodoCounter.js';
 import './App.css';
 
 
-function AppUI({todos, saveTodos,completedTodos, totalTodos}){
+function AppUI({todos, saveTodos,completedTodos, totalTodos, loading, error}){
 
     
   
@@ -14,7 +14,11 @@ function AppUI({todos, saveTodos,completedTodos, totalTodos}){
          <TodoCounter completed = {completedTodos} total = {totalTodos}/>
 
          <MainComponent>
-          <SubComponent todos = {todos} setTodos = {saveTodos}/>
+          <SubComponent
+           todos = {todos}
+            setTodos = {saveTodos}
+            loading={loading}
+            error={error}/>
           
 
          </MainComponent>

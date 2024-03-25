@@ -8,7 +8,7 @@ import { useLocalStorage } from './useLocalStorage.js';
 
 //localStorage.setItem('TODOListRick_V1', defaultTodos);
 function App() {
-  const [todos, saveTodos] = useLocalStorage('TODOListRick_V1', []);
+  const [todos, saveTodos, loading, error] = useLocalStorage('TODOListRick_V1', []);
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
@@ -18,6 +18,8 @@ function App() {
       saveTodos={saveTodos}
       completedTodos={completedTodos}
       totalTodos={totalTodos}
+      loading={loading}
+      error={error}
       />
     
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import { TodoItem } from '../TodoItem/TodoItem';
 import { TodoSearch } from '../TodoSearch/TodoSearch';
 import './TodoList.css';
-function TodoList({todos, setTodos}){
+function TodoList({todos, setTodos, loading, error}){
 
   
   //const [todos, setTodos] = React.useState(defaultTodos);
@@ -44,14 +44,8 @@ function TodoList({todos, setTodos}){
       newTodos[todoIndex].completed = true; 
       saveTodos(newTodos);
   }
+const totalTodos = todos.length;
 
-  console.log("Log 1");
-
-  React.useEffect(()=>{
-    console.log("Loooooog 2");
-  },[]);
-
-  console.log("Log 3");
 
     return (
         <ul className="list-container">
@@ -59,7 +53,9 @@ function TodoList({todos, setTodos}){
               searchValue={searchValue}
                 setSearchValue={setSearchValue}
             />
-
+                {loading && <p>Estamos Cargando</p>}
+                {error && <p>Ha habido un error</p>}
+                {(!loading && todos.length ==0 ) && <p>Crea tu primer Todo!</p>}
                  {!searchValue?(
                       todos.map(todo =>(
                           <TodoItem 
