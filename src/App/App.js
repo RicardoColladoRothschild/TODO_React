@@ -8,18 +8,20 @@ import { useLocalStorage } from './useLocalStorage.js';
 
 //localStorage.setItem('TODOListRick_V1', defaultTodos);
 function App() {
-  const [todos, saveTodos, loading, error] = useLocalStorage('TODOListRick_V1', []);
+  const [todos, saveTodos] = useLocalStorage('TODOListRick_V1', []);
+  
+  console.log("FUERA DE useLocalStorage: Imprimiendo lista de todos, en App.js: ", todos);
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
+ 
  return (
       <AppUI
       todos={todos}
       saveTodos={saveTodos}
       completedTodos={completedTodos}
       totalTodos={totalTodos}
-      loading={loading}
-      error={error}
+      
       />
     
   );
