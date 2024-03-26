@@ -10,7 +10,7 @@ import { useLocalStorage } from './useLocalStorage.js';
 function App() {
   const [todos, saveTodos] = useLocalStorage('TODOListRick_V1', []);
   
-  console.log("FUERA DE useLocalStorage: Imprimiendo lista de todos, en App.js: ", todos);
+  
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
