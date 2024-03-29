@@ -8,7 +8,7 @@ import { useLocalStorage } from './useLocalStorage.js';
 
 //localStorage.setItem('TODOListRick_V1', defaultTodos);
 function App() {
-  const [todos, saveTodos] = useLocalStorage('TODOListRick_V1', []);
+  const {item:todos, saveItem:saveTodos, loading, error} = useLocalStorage('TODOListRick_V1', []);
   
   
 
@@ -21,6 +21,8 @@ function App() {
       saveTodos={saveTodos}
       completedTodos={completedTodos}
       totalTodos={totalTodos}
+      loading={loading}
+      error={error}
       
       />
     
