@@ -1,0 +1,13 @@
+.empty-todos-container{
+    font-size:1.8rem;
+    color:brown;
+    font-weight:600;
+    padding:6px;
+    width:185px;
+    height:41px;
+    background-color:beige;
+    border-radius: 18px;
+    box-shadow: 10px 16px 8px rgba(0,0,0,0.5);
+    border-bottom:3px solid grey;
+    border-right: 3px solid grey;;
+}

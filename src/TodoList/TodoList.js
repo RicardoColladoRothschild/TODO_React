@@ -1,7 +1,11 @@
 import React from 'react';
+import { EmptyTodos } from '../EmptyTodos';
 import { TodoItem } from '../TodoItem/TodoItem';
 import { TodoSearch } from '../TodoSearch/TodoSearch';
+import { TodosError } from '../TodosError';
+import { TodosLoading } from '../TodosLoading';
 import './TodoList.css';
+
 function TodoList({todos, setTodos, loading, error, searchedTodos}){
 
   
@@ -47,9 +51,9 @@ const totalTodos = todos.length;
               searchValue={searchValue}
                 setSearchValue={setSearchValue}
             />
-            {loading && <p>Estamos Cargando...</p>}
-            {error && <p>Ha habido un error.....</p>}
-            {(!loading && totalTodos === 0) && <p>Crea tu primer Todo!</p>}
+            {loading && <TodosLoading/>}
+            {error && <TodosError/>}
+            {(!loading && totalTodos === 0) && <EmptyTodos/>}
 
                 {!searchValue?(
                       todos.map(todo =>(
