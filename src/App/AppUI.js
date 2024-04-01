@@ -5,27 +5,16 @@ import { TodoCounter } from '../TodoCounter/TodoCounter.js';
 import './App.css';
 import {TodoContext} from '../TodoContext/TodoContext';
 
-function AppUI({todos, saveTodos,completedTodos, totalTodos, loading, error}){
+function AppUI(){
 
-    
+   const {completedTodos, totalTodos} = React.useContext(TodoContext);
   
     return(
         <React.Fragment>
-            <TodoContext.Consumer>
-                {({completedTodos, totalTodos})=>(
-                    <TodoCounter completed = {completedTodos} total = {totalTodos}/>
-                )}
-            </TodoContext.Consumer>
-         
-
+            <TodoCounter completed = {completedTodos} total = {totalTodos}/>
          <MainComponent>
           <SubComponent
-           todos = {todos}
-            setTodos = {saveTodos}
-            loading={loading}
-            error={error}/>
-          
-
+           />
          </MainComponent>
      
       </React.Fragment>

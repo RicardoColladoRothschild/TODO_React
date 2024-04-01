@@ -19,7 +19,6 @@ function TodoList(){
       <TodoContext.Consumer>
         {({
           searchValue,
-          setSearchValue,
           loading,
           error,
           totalTodos,
@@ -31,10 +30,7 @@ function TodoList(){
         })=>(
            <ul className="list-container">
 
-           <TodoSearch 
-             searchValue={searchValue}
-               setSearchValue={setSearchValue}
-           />
+           <TodoSearch/>
            {loading && <TodosLoading/>}
            {error && <TodosError/>}
            {(!loading && totalTodos === 0) && <EmptyTodos/>}
