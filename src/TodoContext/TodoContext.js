@@ -6,6 +6,8 @@ const TodoContext = React.createContext();
 function TodoProvider({children}){
     //aqui encapsulas la logica de la app.
     const {item:todos, saveItem:saveTodos, loading, error} = useLocalStorage('TODOListRick_V1', []);
+    
+    const [openModal, setOpenModal] = React.useState(false);
   
   
 
@@ -54,6 +56,8 @@ const estadoDerivado = todos.filter(todo=>todo.text !== text);
             setSearchValue,
             completedTodos,
             totalTodos,
+            setOpenModal,
+            openModal
         }}>
 
             {children}

@@ -1,14 +1,14 @@
 import './Button.css';
-function CreateTodoButton(){
+function CreateTodoButton({setOpenModal}){
+
+
+    function createTodoEventHandle(event){
+
+        setOpenModal(true);
+    }
     return (
         <button className="createTodoButton"
-        onClick={
-            (event)=>{
-                  
-                    console.log(event);
-                    console.log("Has hecho click en agregar, y esto esta en el componente CreateTodoButton");
-                }
-        }
+        onClick={createTodoEventHandle}
         >+
         </button>
     );
