@@ -15,5 +15,6 @@ body{
     display:grid;
     place-items: center;
     gap:45px;
+    position:absolute;
     
 }

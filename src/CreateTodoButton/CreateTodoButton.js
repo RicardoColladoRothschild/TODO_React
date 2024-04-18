@@ -1,10 +1,16 @@
 import './Button.css';
-function CreateTodoButton({setOpenModal}){
+function CreateTodoButton({setOpenModal, openModal}){
 
 
     function createTodoEventHandle(event){
-
-        setOpenModal(true);
+            
+        if(!openModal){
+            setOpenModal(true);
+            
+        }else{
+            setOpenModal(false);
+        }
+        
     }
     return (
         <button className="createTodoButton"

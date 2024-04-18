@@ -4,6 +4,8 @@ import { Modal } from '../Modal/Modal';
 import { TaskImagen } from '../TaskImagen/TaskImagen';
 import { TodoContext } from '../TodoContext/TodoContext';
 import './AddTaskComponent.css';
+
+import { TodoForm } from '../TodoForm/TodoForm';
 function AddTaskComponent(){
     const {openModal, setOpenModal} = React.useContext(TodoContext);
     return (
@@ -12,11 +14,12 @@ function AddTaskComponent(){
             <input placeholder="Comprar cafe"/>
              <CreateTodoButton
                 setOpenModal={setOpenModal}
+                openModal={openModal}
                 
              />
              {openModal &&
                  <Modal>
-                     La funcionalidad de agregar todos
+                     <TodoForm/>
                  </Modal>}
             </div>
             
