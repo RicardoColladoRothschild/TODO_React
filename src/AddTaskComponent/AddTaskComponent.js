@@ -14,8 +14,7 @@ function AddTaskComponent(){
             <input placeholder="Comprar cafe"/>
              <CreateTodoButton
                 setOpenModal={setOpenModal}
-                openModal={openModal}
-                
+                openModal={openModal}                
              />
              {openModal &&
                  <Modal>
