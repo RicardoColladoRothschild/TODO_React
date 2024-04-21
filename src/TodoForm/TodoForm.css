@@ -7,8 +7,7 @@
     flex-direction:column;
     padding:16px;
     position:relative;
-    left:675px;
-    top:185px;
+    
     box-shadow: 20px 21px 3px rgba(0,0,0,0.5);
 }
 .add-newtodo-container label{
