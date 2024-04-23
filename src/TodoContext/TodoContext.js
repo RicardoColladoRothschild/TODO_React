@@ -19,7 +19,8 @@ function TodoProvider({children}){
   
   function returnSearch(value){
     const findsearch = todos.filter((todo)=>{
-      return todo.text.toLowerCase().includes(value.toLowerCase());
+      return todo && todo.text && todo.text.toLowerCase().includes(value.toLowerCase());
+
     });
 
     return findsearch;
