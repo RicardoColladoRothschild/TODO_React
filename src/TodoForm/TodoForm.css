@@ -44,6 +44,7 @@
     font-size:2.8rem;
     font-weight:"bold";
     padding:6px;
+    outline: none;
 }
 .btn-box-container{
     background-color:aquamarine;

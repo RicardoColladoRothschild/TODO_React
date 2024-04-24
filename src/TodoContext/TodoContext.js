@@ -26,6 +26,14 @@ function TodoProvider({children}){
     return findsearch;
   }
 
+  function addTodo(todo){
+    const newTodos = [...todos];
+    newTodos.push({
+      text:todo,
+      completed:false
+    });
+      saveTodos(newTodos);
+  }
   function deleteItem(text){
 
 const estadoDerivado = todos.filter(todo=>todo.text !== text);
@@ -47,6 +55,7 @@ const estadoDerivado = todos.filter(todo=>todo.text !== text);
     return(
         <TodoContext.Provider value={{
             todos,
+            addTodo,
             saveTodos,
             loading,
             error,

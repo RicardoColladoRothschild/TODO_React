@@ -7,12 +7,13 @@ export const TodoForm = () =>{
     const {
         openModal,
         setOpenModal,
+        addTodo
         
     } = React.useContext(TodoContext);
     const [todoData, setTodoData] = React.useState('');
 
-    function datahandler(data){
-        setTodoData(data);
+    function datahandler(event){
+        setTodoData(event.target.value);
     }
     
     const cancelHandler = ()=>{
@@ -20,6 +21,7 @@ export const TodoForm = () =>{
     }
 
     const addTodoHandler = ()=>{
+        addTodo(todoData);
         setOpenModal(false);
     }
 return(
@@ -28,10 +30,12 @@ return(
            
             <textarea 
                 onChange={(event)=>{
-                    datahandler(event.target.value)
+                    datahandler(event)
                 
                  }} 
                  className="new-todo-form"
+                 value={todoData}
+                 placeholder="ejemplo: 'Comprar cafe'"
             />
 
             <div className="button-box-container">
