@@ -4,7 +4,11 @@ import { TodoContext } from '../TodoContext/TodoContext';
 import './TodoForm.css';
 export const TodoForm = () =>{
 
-    const {openModal, setOpenModal} = React.useContext(TodoContext);
+    const {
+        openModal,
+        setOpenModal,
+        
+    } = React.useContext(TodoContext);
     const [todoData, setTodoData] = React.useState('');
 
     function datahandler(data){
