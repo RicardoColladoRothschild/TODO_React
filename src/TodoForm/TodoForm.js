@@ -18,14 +18,24 @@ export const TodoForm = () =>{
     const cancelHandler = ()=>{
         setOpenModal(false);
     }
+
+    const addTodoHandler = ()=>{
+        setOpenModal(false);
+    }
 return(
         <div className="add-newtodo-container">
             <label className="label-newtodo--container">Add a Todo</label>
-            <input onChange={(event)=>{
-                datahandler(event.target.value)
-            }} className="new-todo-form"/>
+           
+            <textarea 
+                onChange={(event)=>{
+                    datahandler(event.target.value)
+                
+                 }} 
+                 className="new-todo-form"
+            />
+
             <div className="button-box-container">
-                <button className="btn-box-container btn-add--newtask-container">add</button>
+                <button onClick={addTodoHandler} className="btn-box-container btn-add--newtask-container">add</button>
                 <button onClick={cancelHandler} className="btn-box-container btn-cancel--newtask-container">cancel</button>
             </div>
         </div>
