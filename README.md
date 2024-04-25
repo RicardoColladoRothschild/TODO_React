@@ -5,7 +5,7 @@ Welcome!
 Este repositorio fue hecho para poner en practica mis conocimientos de react y practicar los conceptos base.
  Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
 
-La rama principal contiene el código con el que se puede iniciar la aplicacion, las demas ramas fueron pruebas que fui creando mientras llevaba acabo del desarrollo.
+La rama principal contiene el código con el que se puede iniciar la aplicacion, las demas ramas fueron pruebas que fui creando mientras llevaba acabo del desarrollo. Alguna de estas ramas fueron creadas para agregar nuevos features o para corregir ciertos errores.
 
 
 ## Getting Started with Create React App
@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.

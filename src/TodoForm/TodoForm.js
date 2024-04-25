@@ -5,7 +5,6 @@ import './TodoForm.css';
 export const TodoForm = () =>{
 
     const {
-        openModal,
         setOpenModal,
         addTodo
         
