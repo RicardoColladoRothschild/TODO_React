@@ -1,6 +1,7 @@
 {
   "name": "TODO-List-Ricardo_Collado_Rothschild",
   "version": "0.1.0",
+  "homepage":".",
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
